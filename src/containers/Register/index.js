@@ -1,17 +1,14 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { register } from '../../context/actions/register'
+import { register } from '../../context/actions/auth/register'
+import RegisterUI from '../../layout/Register'
+import useForm from './useForm'
 
 const RegisterContainer = () => {
 
-    useEffect(()=> {
-        register();
-    },[])
+    useEffect(()=> {},[])
     return(
-        <div>
-            <h1>Register</h1>
-            <Link to='/auth/login'>Login</Link>
-        </div>
+        <RegisterUI form= {useForm()} />
     )
 }
 
